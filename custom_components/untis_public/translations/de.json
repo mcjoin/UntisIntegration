@@ -1,0 +1,223 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Untis Public",
+        "description": "Wie soll die Schule gefunden werden?",
+        "menu_options": {
+          "search": "Schule suchen",
+          "manual": "Server und Schulname manuell eingeben"
+        }
+      },
+      "search": {
+        "title": "Schule suchen",
+        "description": "Schulname oder Ort eingeben – genau wie in der Untis App.",
+        "data": {
+          "search": "Schule / Ort"
+        }
+      },
+      "manual": {
+        "title": "Manuelle Eingabe",
+        "description": "Server (z. B. neilo.webuntis.com) und Login-Name der Schule (steht in der WebUntis-URL hinter ?school=).",
+        "data": {
+          "server": "Server",
+          "school": "Login-Name der Schule"
+        }
+      },
+      "select_school": {
+        "title": "Schule auswählen",
+        "data": {
+          "school": "Schule"
+        }
+      },
+      "select_class": {
+        "title": "Klasse auswählen",
+        "description": "Klassen mit öffentlichem Stundenplan an: {school}.",
+        "data": {
+          "class_id": "Klasse"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Keine Verbindung zu WebUntis.",
+      "too_many_results": "Zu viele Treffer – bitte genauer suchen (z. B. mit Ort).",
+      "no_results": "Keine Schule gefunden.",
+      "unknown": "Unerwarteter Fehler."
+    },
+    "abort": {
+      "already_configured": "Diese Klasse ist bereits eingerichtet.",
+      "anonymous_disabled": "Die Schule erlaubt keinen anonymen Zugriff (kein öffentlicher Stundenplan).",
+      "no_classes": "Keine Klassen mit öffentlichem Stundenplan gefunden.",
+      "cannot_connect": "Keine Verbindung zu WebUntis.",
+      "unknown": "Unerwarteter Fehler."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Optionen",
+        "menu_options": {
+          "settings": "Aktualisierung & Vorschau",
+          "teachers": "Lehrer umbenennen",
+          "subjects": "Fächer umbenennen",
+          "custom_lessons": "Eigene Stunden (AGs, Lerngruppen)"
+        }
+      },
+      "settings": {
+        "title": "Einstellungen",
+        "data": {
+          "scan_interval": "Aktualisierungsintervall",
+          "days_ahead": "Tage vorausschauen"
+        }
+      },
+      "teachers": {
+        "title": "Lehrer umbenennen",
+        "description": "Für jedes Lehrer-Kürzel einen Anzeigenamen eintragen ({count} gefunden), z. B. „Frau Müller“. Leer lassen = Kürzel bleibt.\n\nLehrer, die gerade nicht im Stundenplan stehen, unten eintragen – eine Zeile pro Lehrer: `KÜRZEL = Name`.",
+        "data": {
+          "additional": "Weitere Lehrer (KÜRZEL = Name)"
+        }
+      },
+      "subjects": {
+        "title": "Fächer umbenennen",
+        "description": "Für jedes Fach-Kürzel einen Anzeigenamen eintragen ({count} gefunden). Leer lassen = Kürzel bleibt.\n\nLangnamen laut Untis:\n{hints}\n\nWeitere Fächer unten, eine Zeile pro Fach: `KÜRZEL = Name`.",
+        "data": {
+          "additional": "Weitere Fächer (KÜRZEL = Name)"
+        }
+      },
+      "custom_lessons": {
+        "title": "Eigene Stunden",
+        "description": "Bis zu 3 eigene Stunden, die wöchentlich zum Untis-Stundenplan hinzugefügt werden."
+      },
+      "custom_1": {
+        "title": "Eigene Stunde {number}",
+        "description": "Stunde, die nicht in Untis steht (AG, Lerngruppe …). Die Zeiten kommen aus dem Zeitraster der Schule; für eine Doppelstunde „bis Stunde“ setzen.\n\nName leeren und speichern = Eintrag löschen.",
+        "data": {
+          "name": "Name (z. B. Schach-AG)",
+          "weekday": "Wochentag",
+          "slot_from": "Von Stunde",
+          "slot_to": "Bis Stunde (optional)",
+          "teacher": "Lehrer (optional)",
+          "room": "Raum (optional)",
+          "weeks": "Rhythmus",
+          "school_days_only": "Nur an Schultagen (nicht in Ferien / an Tagen ohne Unterricht)"
+        }
+      },
+      "custom_2": {
+        "title": "Eigene Stunde {number}",
+        "description": "Stunde, die nicht in Untis steht (AG, Lerngruppe …). Die Zeiten kommen aus dem Zeitraster der Schule; für eine Doppelstunde „bis Stunde“ setzen.\n\nName leeren und speichern = Eintrag löschen.",
+        "data": {
+          "name": "Name (z. B. Schach-AG)",
+          "weekday": "Wochentag",
+          "slot_from": "Von Stunde",
+          "slot_to": "Bis Stunde (optional)",
+          "teacher": "Lehrer (optional)",
+          "room": "Raum (optional)",
+          "weeks": "Rhythmus",
+          "school_days_only": "Nur an Schultagen (nicht in Ferien / an Tagen ohne Unterricht)"
+        }
+      },
+      "custom_3": {
+        "title": "Eigene Stunde {number}",
+        "description": "Stunde, die nicht in Untis steht (AG, Lerngruppe …). Die Zeiten kommen aus dem Zeitraster der Schule; für eine Doppelstunde „bis Stunde“ setzen.\n\nName leeren und speichern = Eintrag löschen.",
+        "data": {
+          "name": "Name (z. B. Schach-AG)",
+          "weekday": "Wochentag",
+          "slot_from": "Von Stunde",
+          "slot_to": "Bis Stunde (optional)",
+          "teacher": "Lehrer (optional)",
+          "room": "Raum (optional)",
+          "weeks": "Rhythmus",
+          "school_days_only": "Nur an Schultagen (nicht in Ferien / an Tagen ohne Unterricht)"
+        }
+      }
+    },
+    "error": {
+      "slot_order": "„Bis Stunde“ liegt vor „Von Stunde“."
+    },
+    "abort": {
+      "no_timegrid": "Das Zeitraster der Schule konnte nicht geladen werden."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "lessons_today": {
+        "name": "Stunden heute"
+      },
+      "lessons_tomorrow": {
+        "name": "Stunden morgen"
+      },
+      "next_school_day": {
+        "name": "Nächster Schultag"
+      },
+      "school_start_today": {
+        "name": "Schulbeginn heute"
+      },
+      "school_end_today": {
+        "name": "Schulende heute"
+      },
+      "school_start_tomorrow": {
+        "name": "Schulbeginn morgen"
+      },
+      "school_end_tomorrow": {
+        "name": "Schulende morgen"
+      },
+      "school_start_next_day": {
+        "name": "Schulbeginn nächster Schultag"
+      },
+      "current_lesson": {
+        "name": "Aktuelle Stunde"
+      },
+      "next_lesson": {
+        "name": "Nächste Stunde"
+      },
+      "changes": {
+        "name": "Vertretungen und Änderungen"
+      },
+      "messages": {
+        "name": "Nachrichten des Tages"
+      },
+      "last_update": {
+        "name": "Letzte Aktualisierung"
+      }
+    },
+    "binary_sensor": {
+      "school_today": {
+        "name": "Schule heute"
+      },
+      "school_tomorrow": {
+        "name": "Schule morgen"
+      },
+      "changes_today": {
+        "name": "Änderungen heute"
+      },
+      "changes_tomorrow": {
+        "name": "Änderungen morgen"
+      }
+    },
+    "calendar": {
+      "timetable": {
+        "name": "Stundenplan"
+      }
+    }
+  },
+  "selector": {
+    "weekday": {
+      "options": {
+        "0": "Montag",
+        "1": "Dienstag",
+        "2": "Mittwoch",
+        "3": "Donnerstag",
+        "4": "Freitag",
+        "5": "Samstag",
+        "6": "Sonntag"
+      }
+    },
+    "weeks": {
+      "options": {
+        "every": "Jede Woche",
+        "even": "Nur gerade Kalenderwochen",
+        "odd": "Nur ungerade Kalenderwochen"
+      }
+    }
+  }
+}

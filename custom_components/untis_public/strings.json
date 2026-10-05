@@ -1,0 +1,223 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Untis Public",
+        "description": "How do you want to find the school?",
+        "menu_options": {
+          "search": "Search school",
+          "manual": "Enter server and school name manually"
+        }
+      },
+      "search": {
+        "title": "Search school",
+        "description": "Enter the school name or city – just like in the Untis app.",
+        "data": {
+          "search": "School / city"
+        }
+      },
+      "manual": {
+        "title": "Manual entry",
+        "description": "Server (e.g. neilo.webuntis.com) and school login name (visible in the WebUntis URL after ?school=).",
+        "data": {
+          "server": "Server",
+          "school": "School login name"
+        }
+      },
+      "select_school": {
+        "title": "Select school",
+        "data": {
+          "school": "School"
+        }
+      },
+      "select_class": {
+        "title": "Select class",
+        "description": "Classes with a public timetable at {school}.",
+        "data": {
+          "class_id": "Class"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to WebUntis.",
+      "too_many_results": "Too many results – please be more specific (e.g. add the city).",
+      "no_results": "No school found.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This class is already configured.",
+      "anonymous_disabled": "The school does not allow anonymous access (no public timetable).",
+      "no_classes": "No classes with a public timetable found.",
+      "cannot_connect": "Could not connect to WebUntis.",
+      "unknown": "Unexpected error."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "menu_options": {
+          "settings": "Update interval & look-ahead",
+          "teachers": "Rename teachers",
+          "subjects": "Rename subjects",
+          "custom_lessons": "Own lessons (clubs, study groups)"
+        }
+      },
+      "settings": {
+        "title": "Settings",
+        "data": {
+          "scan_interval": "Update interval",
+          "days_ahead": "Days to look ahead"
+        }
+      },
+      "teachers": {
+        "title": "Rename teachers",
+        "description": "Enter a display name for each teacher abbreviation ({count} found). Leave empty to keep the abbreviation.\n\nTeachers not in the current timetable can be added below, one per line: `ABBR = Name`.",
+        "data": {
+          "additional": "Further teachers (ABBR = Name)"
+        }
+      },
+      "subjects": {
+        "title": "Rename subjects",
+        "description": "Enter a display name for each subject abbreviation ({count} found). Leave empty to keep the abbreviation.\n\nLong names supplied by Untis:\n{hints}\n\nFurther subjects below, one per line: `ABBR = Name`.",
+        "data": {
+          "additional": "Further subjects (ABBR = Name)"
+        }
+      },
+      "custom_lessons": {
+        "title": "Own lessons",
+        "description": "Up to 3 own lessons added weekly to the Untis timetable."
+      },
+      "custom_1": {
+        "title": "Own lesson {number}",
+        "description": "A lesson not delivered by Untis (club, study group …). Times follow the school's time grid; set \"to period\" for a double lesson.\n\nClear the name and save to delete the entry.",
+        "data": {
+          "name": "Name (e.g. chess club)",
+          "weekday": "Weekday",
+          "slot_from": "From period",
+          "slot_to": "To period (optional)",
+          "teacher": "Teacher (optional)",
+          "room": "Room (optional)",
+          "weeks": "Rhythm",
+          "school_days_only": "Only on school days (not during holidays / days without lessons)"
+        }
+      },
+      "custom_2": {
+        "title": "Own lesson {number}",
+        "description": "A lesson not delivered by Untis (club, study group …). Times follow the school's time grid; set \"to period\" for a double lesson.\n\nClear the name and save to delete the entry.",
+        "data": {
+          "name": "Name (e.g. chess club)",
+          "weekday": "Weekday",
+          "slot_from": "From period",
+          "slot_to": "To period (optional)",
+          "teacher": "Teacher (optional)",
+          "room": "Room (optional)",
+          "weeks": "Rhythm",
+          "school_days_only": "Only on school days (not during holidays / days without lessons)"
+        }
+      },
+      "custom_3": {
+        "title": "Own lesson {number}",
+        "description": "A lesson not delivered by Untis (club, study group …). Times follow the school's time grid; set \"to period\" for a double lesson.\n\nClear the name and save to delete the entry.",
+        "data": {
+          "name": "Name (e.g. chess club)",
+          "weekday": "Weekday",
+          "slot_from": "From period",
+          "slot_to": "To period (optional)",
+          "teacher": "Teacher (optional)",
+          "room": "Room (optional)",
+          "weeks": "Rhythm",
+          "school_days_only": "Only on school days (not during holidays / days without lessons)"
+        }
+      }
+    },
+    "error": {
+      "slot_order": "\"To period\" is before \"from period\"."
+    },
+    "abort": {
+      "no_timegrid": "Could not load the school's time grid."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "lessons_today": {
+        "name": "Lessons today"
+      },
+      "lessons_tomorrow": {
+        "name": "Lessons tomorrow"
+      },
+      "next_school_day": {
+        "name": "Next school day"
+      },
+      "school_start_today": {
+        "name": "School start today"
+      },
+      "school_end_today": {
+        "name": "School end today"
+      },
+      "school_start_tomorrow": {
+        "name": "School start tomorrow"
+      },
+      "school_end_tomorrow": {
+        "name": "School end tomorrow"
+      },
+      "school_start_next_day": {
+        "name": "School start next school day"
+      },
+      "current_lesson": {
+        "name": "Current lesson"
+      },
+      "next_lesson": {
+        "name": "Next lesson"
+      },
+      "changes": {
+        "name": "Timetable changes"
+      },
+      "messages": {
+        "name": "Messages of the day"
+      },
+      "last_update": {
+        "name": "Last update"
+      }
+    },
+    "binary_sensor": {
+      "school_today": {
+        "name": "School today"
+      },
+      "school_tomorrow": {
+        "name": "School tomorrow"
+      },
+      "changes_today": {
+        "name": "Changes today"
+      },
+      "changes_tomorrow": {
+        "name": "Changes tomorrow"
+      }
+    },
+    "calendar": {
+      "timetable": {
+        "name": "Timetable"
+      }
+    }
+  },
+  "selector": {
+    "weekday": {
+      "options": {
+        "0": "Monday",
+        "1": "Tuesday",
+        "2": "Wednesday",
+        "3": "Thursday",
+        "4": "Friday",
+        "5": "Saturday",
+        "6": "Sunday"
+      }
+    },
+    "weeks": {
+      "options": {
+        "every": "Every week",
+        "even": "Even calendar weeks only",
+        "odd": "Odd calendar weeks only"
+      }
+    }
+  }
+}

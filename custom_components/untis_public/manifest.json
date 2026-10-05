@@ -1,0 +1,12 @@
+{
+  "domain": "untis_public",
+  "name": "Untis Public (anonymer Stundenplan)",
+  "codeowners": ["@mcjoin"],
+  "config_flow": true,
+  "documentation": "https://github.com/mcjoin/UntisIntegration",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/mcjoin/UntisIntegration/issues",
+  "requirements": [],
+  "version": "0.3.0"
+}
